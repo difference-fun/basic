@@ -366,7 +366,7 @@ trait Main {
                 if($count === 2){
                     $options->server->name = $explode[0] . '.' . $object->config('localhost.extension');
                 } else {
-                    throw new Exception('server name should exist of domain and extension, for example: r3m.io');
+                    throw new Exception('server name should exist of domain and extension, for example: difference.fun');
                 }
                 if(
                     property_exists($options, 'server') &&
@@ -380,7 +380,7 @@ trait Main {
                         if($count === 3){
                             $list[$nr] = $explode[0] . '.' . $options->server->name;
                         } else {
-                            throw new Exception('server alias should exist of domain and extension, for example: r3m.io');
+                            throw new Exception('server alias should exist of domain and extension, for example: difference.fun');
                         }
                     }
                     $options->server->alias = $list;
@@ -955,16 +955,16 @@ trait Main {
             $options->locality = 'Borne';
         }
         if(!property_exists($options, 'organization')){
-            $options->organization = 'r3m.io';
+            $options->organization = 'universe orange';
         }
         if(!property_exists($options, 'unit')){
             $options->unit = 'Development';
         }
         if(!property_exists($options, 'name')){
-            $options->name = 'r3m.io';
+            $options->name = 'difference';
         }
         if(!property_exists($options, 'email')) {
-            $options->email = 'development@r3m.io';
+            $options->email = 'development@universeorange.com';
         }
         if(!property_exists($options, 'keyout')){
             $options->keyout = 'key.key';
@@ -1014,7 +1014,7 @@ trait Main {
     public function cron_backup($flags, $options): void
     {
         $object = $this->object();
-        $url = '/etc/cron.d/r3m_io';
+        $url = '/etc/cron.d/difference_fun';
         $environment = $object->config('framework.environment');
         if(File::exist($url)){
             $target = $object->config('project.dir.data') .
@@ -1040,9 +1040,9 @@ trait Main {
                 $object->config('ds')
             ;
             $source = $object->config('project.dir.package') .
-                'R3m' .
+                'Difference' .
                 $object->config('ds') .
-                'Io' .
+                'Fun' .
                 $object->config('ds') .
                 'Basic' .
                 $object->config('ds') .
@@ -1072,7 +1072,7 @@ trait Main {
     public function cron_restore($flags=null, $options=null): void
     {
         $object = $this->object();
-        $url = '/etc/cron.d/r3m_io';
+        $url = '/etc/cron.d/difference_fun';
         $environment = $object->config('framework.environment');
         $source = $object->config('project.dir.data') .
             'Cron' .
@@ -1158,7 +1158,7 @@ trait Main {
                     break;
                 }
             }
-            $url_cron_d = '/etc/cron.d/r3m_io';
+            $url_cron_d = '/etc/cron.d/difference_fun';
             if(!File::exist($url_cron_d)){
                 $this->cron_restore();
             }

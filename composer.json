@@ -1,9 +1,9 @@
 {
     "name" : "difference_fun/basic",
-    "description" : "difference_fun/basic see https://r3m.io for detailed usage",
+    "description" : "difference_fun/basic see https://difference.fun for detailed usage",
     "type" : "library",
-    "keywords" : ["node", "r3m", "library", "framework", "apache2", "php", "cron", "r3m.io"],
-    "homepage": "https://r3m.io",
+    "keywords" : ["node", "difference", "fun", "framework", "apache2", "php", "cron", "difference.fun"],
+    "homepage": "https://difference.fun",
     "require" : {
         "difference_fun/framework": "*"
     },
