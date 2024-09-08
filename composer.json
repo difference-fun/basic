@@ -1,0 +1,15 @@
+{
+    "name" : "difference_fun/basic",
+    "description" : "difference_fun/basic see https://r3m.io for detailed usage",
+    "type" : "library",
+    "keywords" : ["node", "r3m", "library", "framework", "apache2", "php", "cron", "r3m.io"],
+    "homepage": "https://r3m.io",
+    "require" : {
+        "difference_fun/framework": "*"
+    },
+    "license" : "MIT",
+    "authors" : [{
+        "name" : "Remco van der Velde",
+        "email" : "development@universeorange.com"
+    }]
+}
